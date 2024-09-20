@@ -1,0 +1,23 @@
+python ./mace/scripts/run_train.py \
+    --name="MACE_on_big_data" \
+    --num_workers=16 \
+    --train_file="./processed_data/train" \
+    --valid_file="./processed_data/valid" \
+    --test_dir="./processed_data" \
+    --statistics_file="./processed_data/statistics.json" \
+    --model="ScaleShiftMACE" \
+    --num_interactions=2 \
+    --num_channels=128 \
+    --max_L=1 \
+    --correlation=3 \
+    --batch_size=32 \
+    --valid_batch_size=32 \
+    --max_num_epochs=100 \
+    --swa \
+    --start_swa=60 \
+    --ema \
+    --ema_decay=0.99 \
+    --amsgrad \
+    --error_table='PerAtomMAE' \
+    --device=cpu \
+    --seed=123
