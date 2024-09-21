@@ -1,7 +1,7 @@
 python ./mace/scripts/preprocess_data.py \
-    --train_file="./mptrj-gga-ggap" \
+    --train_file="./mptrj-gga-ggapu" \
     --valid_fraction=0.05 \
-    --test_file="./mptrj-gga-ggap" \
+    --test_file="./mptrj-gga-ggapu" \
     --atomic_numbers="[1, 6, 7, 8, 9, 15, 16, 17, 35, 53]" \
     --r_max=4.5 \
     --h5_prefix="./processed_data" \
