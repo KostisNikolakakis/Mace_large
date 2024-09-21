@@ -18,11 +18,11 @@ RUN pip install ./mace
 
 RUN mkdir ./processed_data
 
-RUN wget --no-check-certificate https://github.com/ACEsuit/mace-mp/releases/download>
+RUN wget --no-check-certificate https://github.com/ACEsuit/mace-mp/releases/download/mace_mp_0/mptrj-gga-ggapu-statistics.json -P /the_workdir/processed_data
 
-RUN mv /the_workdir/processed_data/mptrj-gga-ggapu-statistics.json /the_workdir/proc>
+RUN mv /the_workdir/processed_data/mptrj-gga-ggapu-statistics.json /the_workdir/processed_data/statistics.json
 
-RUN wget --no-check-certificate https://github.com/ACEsuit/mace-mp/releases/download>
+RUN wget --no-check-certificate https://github.com/ACEsuit/mace-mp/releases/download/mace_mp_0/training_data.zip
 
 RUN unzip training_data.zip
 
