@@ -745,6 +745,12 @@ def build_preprocess_arg_parser() -> argparse.ArgumentParser:
         required=True,
     )
     parser.add_argument(
+        "--work_dir",
+        help="set directory for all files and folders",
+        type=str,
+        default=".",
+    )
+    parser.add_argument(
         "--valid_file",
         help="Training set xyz file",
         type=str,
